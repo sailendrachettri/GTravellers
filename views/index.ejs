@@ -210,20 +210,20 @@
                 <h1>Contact Us</h1>
             </div>
 
-            <form id="form" method="post" name="contact-form">
+            <form id="form" action="/" method="post">
                 <div class="user-info">
                     <div class="details">
                         <label for="first-name">First Name</label>
-                        <input type="text" id="first-name">
+                        <input type="text" id="first-name" name="firstname">
 
                         <label for="last-name">Last Name</label>
-                        <input type="text" id="last-name">
+                        <input type="text" id="last-name" name="lastname">
 
                         <label for="email">Email</label>
-                        <input type="email" id="email">
+                        <input type="email" id="email" name="email">
 
                         <label for="number">Phone</label>
-                        <input type="number" id="number">
+                        <input type="number" id="number" name="phone">
                     </div>
 
                     <div class="msg-box">
@@ -231,7 +231,7 @@
                         <textarea name="message" id="message" cols="30" rows="8"></textarea>
                     </div>
                 </div>
-                <button>Submit</button>
+                <button type="submit">Submit</button>
             </form>
         </div>
 

@@ -9,9 +9,12 @@ connect.then(()=>{
 
 // create schema
 const UserSchema = mongoose.Schema({
-    name : {
+    firstname : {
         type : String,
         required : true
+    },
+    lastname : {
+        type : String
     },
     email : {
         type : String,
