@@ -35,19 +35,18 @@ app.post('/', async(req, res)=>{
     }
 
     // check for duplicate user using (email)
-    const existingEmail = collection.findOne({email : req.body.email});
+    const existingEmail = await collection.findOne({email : data.email});
 
-    if(!existingEmail){
+    if(existingEmail){
+        console.log("Email already exist!");
+        res.send("Email already exist!");
+        
+    } else {
         const userdata = await collection.insertMany(data)
         console.log(userdata);
     
         res.render("index"); // return to homepage
-    } else {
-        console.log("Email already exist!");
-        res.send("Email already exist!");
     }
-
-
 })
 
 app.listen(PORT, ()=>{
