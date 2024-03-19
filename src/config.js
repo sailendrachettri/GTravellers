@@ -1,6 +1,11 @@
 const mongoose = require("mongoose");
+const dotenv = require("dotenv");
 // const connect = mongoose.connect("mongodb://localhost:27017/GT");
-const connect = mongoose.connect("mongodb+srv://sailendra9083:2uwq2irQvi3sPu5l@cluster0.qw6sgcw.mongodb.net/GTravellers");
+// const connect = mongoose.connect("mongodb+srv://sailendra9083:2uwq2irQvi3sPu5l@cluster0.qw6sgcw.mongodb.net/GTravellers");
+
+dotenv.config();
+
+const connect = mongoose.connect(process.env.MONGODB_URL)
 
 
 connect.then(()=>{

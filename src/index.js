@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const collection = require("./config");
 
-const PORT = 5000;
+const PORT = process.env.PORT || 8000;
 const app = express();
 // to support URL-encoded bodies
 app.use(express.urlencoded({extended: true}));
