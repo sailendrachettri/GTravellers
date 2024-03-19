@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const collection = require("./config");
 
 const PORT = 5000;
 const app = express();
@@ -10,7 +11,7 @@ app.set('view engine', 'ejs');
 // static files
 app.use(express.static('public'));
 
-// render the homepage
+// -----------------------Render the URL-----------------------
 app.get('/', (req, res)=>{
     res.render("index")
 })
