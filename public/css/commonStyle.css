@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100..800;1,100..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--para-font);
+}
+
+:root{
+    --bg-color: rgb(37, 82, 179);
+    --text-color-light: whitesmoke;
+    --text-color-black: black;
+    --text-color-dark: rgb(37, 82, 179);
+    --border-color: rgb(37 82 179 / 34%);
+    --box-color: rgb(249 249 249);
+    --para-font: "Glory", sans-serif;
+    --heading-font: "Glory", sans-serif;
+    --box-shadow: 2px 2px 4px 2px whitesmoke;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* BUTTONS */
+
+button{
+    border: none;
+    cursor: pointer;
+    padding: 4px 6px;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: var(--bg-color);
+    color: var(--text-color-light);
+    font-family: var(--para-font); 
+}
+
+/* ICONS AND HEADER */
+.icon-and-header{
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.icon-and-header span{
+    font-size: xx-large;
+    color: var(--bg-color);
+}
