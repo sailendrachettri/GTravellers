@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
-const connect = mongoose.connect("mongodb://localhost:27017/GT");
+// const connect = mongoose.connect("mongodb://localhost:27017/GT");
+const connect = mongoose.connect("mongodb+srv://sailendra9083:2uwq2irQvi3sPu5l@cluster0.qw6sgcw.mongodb.net/GTravellers");
+
 
 connect.then(()=>{
     console.log("Database connected successfully!");
