@@ -37,17 +37,16 @@ app.post('/', async(req, res)=>{
     // check for duplicate user using (email)
     const existingEmail = await collection.findOne({email : data.email});
 
-    if(existingEmail){
-        console.log("Email already exist!");
-        res.send("Email already exist!");
-        
+    if (existingEmail) {
+        console.log("Email already exists!");
+        res.send("Email exist");
     } else {
-        const userdata = await collection.insertMany(data)
+        const userdata = await collection.insertMany(data);
         console.log(userdata);
-    
-        res.render("index"); // return to homepage
+        res.send("Thank you registration");
     }
 })
+
 
 app.listen(PORT, ()=>{
     console.log("Server is listening at port ", PORT);
